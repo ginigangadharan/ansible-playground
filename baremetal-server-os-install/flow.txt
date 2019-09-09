@@ -1,0 +1,15 @@
+RHEL Autoinstall for HP server with Ansible
+===========================================
+- Get IP/Name details
+- Check Sanity
+    - Check AD entry
+    - Check DNS of iLO - yes
+    - Check DNS of server - yes
+    - Check server DNS/IP for SSH connection
+        - fail flow if ssh active (means server already online)
+    - Check iLO access with provided credentials
+- Create custom isolinux.cfg based on template and ip/mask/name variables
+- Create custom iso with lesser timeout to boot automatically
+- Mount ISO and boot
+- Check for installation status
+    - bigger timeout window to allow completion and check ssh status
